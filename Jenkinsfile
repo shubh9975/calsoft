@@ -16,7 +16,7 @@ pipeline{
     stage('Installing k3s'){
        steps{
           sh '''     
-              sudo ansible-playbook k3s/tests/test.yml --tags $params.k3s
+              sudo ansible-playbook k3s/tests/test.yml --tag $params.k3s
           '''
        }
     }
