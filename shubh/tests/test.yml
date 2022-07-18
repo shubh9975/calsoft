@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - shubh
+  environment:
+    KUBERNETES_MASTER: "{{ kubeconfig_path }}"

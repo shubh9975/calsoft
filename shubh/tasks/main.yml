@@ -1,0 +1,9 @@
+---
+# tasks file for k3s
+- name: Installing k3s on server
+  shell: curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="- -write-kubeconfig=/home/ubuntu/.kube/config - -write-kubeconfig-mode=644" sh - 
+  tags: install_k3s
+
+- name: uninstall k3s from server
+  shell: bash /usr/local/bin/k3s-uninstall.sh
+  tags: uninstall_k3s
