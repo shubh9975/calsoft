@@ -2,6 +2,6 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - shubh
+    - k3s
   environment:
     KUBERNETES_MASTER: "{{ kubeconfig_path }}"
