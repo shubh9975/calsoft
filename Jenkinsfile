@@ -15,10 +15,7 @@ pipeline{
     }
     stage('Installing k3s'){
        steps{
-          sh '''
-              sudo yum update -y
-              sudo amazon-linux-extras install ansible2 -y
-              ansible --version         
+          sh '''     
               sudo ansible-playbook k3s/tests/test.yml --tags $params.k3-setup
           '''
        }
