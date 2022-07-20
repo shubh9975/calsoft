@@ -1,0 +1,12 @@
+---
+# tasks file for deployment
+- name: ls
+  shell: ls
+- name: Deployment on kubernetes cluster 
+  shell: kubectl create -f /etc/ansible/roles/deployment/files/demo.yaml
+  tags: deploy
+
+- name: Deployment remove from  kubernetes cluster
+  shell: kubectl delete -f /etc/ansible/roles/deployment/files/demo.yaml
+  tags: delete_deploy
+
