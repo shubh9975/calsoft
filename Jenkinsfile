@@ -16,7 +16,7 @@ pipeline{
     stage('K8s Deployment'){
        steps{
           sh '''     
-               ansible-playbook deployment/tests/test.yaml --tags $option
+               ansible-playbook deployment/tests/test.yml --tags $option
           '''
        }
     }
