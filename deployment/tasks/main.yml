@@ -1,7 +1,5 @@
 ---
 # tasks file for deployment
-- name: ls
-  shell: ls
 - name: Deployment on kubernetes cluster 
   shell: kubectl create -f demo.yaml
   tags: deploy
