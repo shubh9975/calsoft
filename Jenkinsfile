@@ -16,7 +16,7 @@ pipeline{
     stage('Installing k3s'){
        steps{
           sh '''     
-               ansible-playbook deployment/demo.yaml --tags $option
+               ansible-playbook tests/test.yaml --tags $option
           '''
        }
     }
