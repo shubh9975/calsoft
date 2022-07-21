@@ -13,10 +13,10 @@ pipeline{
            extensions: [], userRemoteConfigs: [[url: 'https://github.com/shubh9975/calsoft.git']]])
        }
     }
-    stage('Installing k3s'){
+    stage('K8s Deployment'){
        steps{
           sh '''     
-               ansible-playbook tests/test.yaml --tags $option
+               ansible-playbook deployment/tests/test.yaml --tags $option
           '''
        }
     }
