@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
     name: calsoft-deployment
-    namespace: calsoft
+    #namespace: calsoft
 spec:
     replicas: 5
     selector:
@@ -22,7 +22,7 @@ apiVersion: v1
 kind: Service
 metadata:
     name: calsoft-service
-    namespace: calsoft
+    #namespace: calsoft
 spec:
     type: NodePort
     ports:
