@@ -15,7 +15,7 @@ spec:
         spec:
             containers:
                 - name: calsoft
-                  image: shubh9975/simple-app:v3
+                  image: shubh9975/simple-app:v1.0.0
 
 ---
 apiVersion: v1
