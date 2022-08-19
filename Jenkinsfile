@@ -13,7 +13,7 @@ pipeline{
            extensions: [], userRemoteConfigs: [[url: 'https://github.com/shubh9975/calsoft.git']]])
        }
     }
-    stage('K8s Deployment'){
+    stage('Deployment'){
        steps{
           sh '''     
                sudo ansible-playbook deployment/tests/test.yml --tags $option
