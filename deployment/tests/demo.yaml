@@ -27,7 +27,7 @@ spec:
     type: NodePort
     ports:
         - port: 80
-          targetPort: 31488
+          targetPort: 9376
     selector:
         env: test
 
