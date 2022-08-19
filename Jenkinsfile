@@ -16,7 +16,7 @@ pipeline{
     stage('Deployment'){
        steps{
           sh '''     
-               sudo ansible-playbook deployment/tests/test.yml --tags $option
+               ansible-playbook deployment/tests/test.yml --tags $option
           '''
        }
     }
